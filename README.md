@@ -11,10 +11,10 @@ User are required to sign up and fill necessary information about yourself to ge
 <h2>MVP Goals</h2>
 
 Here is the brief discription and features of how this app works.
-<li>you can excess thousand of topic and sub-topic related to your health queries.
+<li>You can excess thousand of topic and sub-topic related to your health queries.
 <li>You/User can make a profile and save your queries and information for your future references.
 <li>You/user can share the information to other 
-<li>you can create your health profile b entering your full information
+<li>You can create your health profile b entering your full information
 <li>With your given information app can recommend you vaious health information as well as display you your nearest healthcare facilities.
 
 <h2>Stretch Goals<h2>
@@ -62,7 +62,7 @@ Me as a user i want the app to be very easy to access and very self explanatory 
 <li>User can share the information aquire from the app.
 
 <h2>API INFORMATION</h2>
-My-health is using <a href='https://health.gov/our-work/health-literacy/consumer-health-content/free-web-content/apis-developers/documentation'>API LINK INFO!</a> api which is very much developers friendly and tons of information related to the given topic.For more information please visit the link I posted above.
+<p>My-health is using <a href='https://health.gov/our-work/health-literacy/consumer-health-content/free-web-content/apis-developers/documentation'>API LINK INFO!</a> api which is very much developers friendly and tons of information related to the given topic.For more information please visit the link I posted above.</p>
 
 <h2>WIREFRAMES<h2>
 
@@ -76,29 +76,38 @@ My-health is using <a href='https://health.gov/our-work/health-literacy/consumer
 
 <img src ='img/lama2.png'>
 
+<h2>ERDs</h2>
 
+<img src ='img/lama3.png'>
+<br>
 <h2>CRUDs</h2>
 <ul>
 Post/POST
 </ul>
-<li>user account(user email,password)</li>
+<li>User account(user email,password)</li>
+<li>User Profile and form</li>
+<li>User can save article 
 <ul>
 Read/GET
 </ul>
-<li>main index page</li>
-<li>account create page</li>
-<li>saved item page</li>
-<li>user profile page</li>
-
+<li>Main index page</li>
+<li>Account create page</li>
+<li>Saved item page</li>
+<li>User profile page</li>
+<li>can search multiple topics </li>
 <ul>
-Update/POST
+
+
+Update/PUT
 </ul>
-<li>user can update the form of recommondation</li>
-<li>user can update account password</li>
+<li>User can update the form of recommondation</li>
+
 
 <ul>
-<li>user can remove the saved file from the profile</li>
-<li>user can also remove all the data and information from the database</li>
+Delete
+</ul>
+<li>User can remove the saved file from the profile</li>
+<li>User can also remove all the data and information from the database</li>
 
 
 
