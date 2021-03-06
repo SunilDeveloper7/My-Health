@@ -1,0 +1,25 @@
+/**
+ * TODO LIST: 
+ * stub out routes and controllers -- test to make sure they work
+ * 
+ * update associations in db models -- test models with dbTest file
+ * 
+ * models.article.belongsTo(models.user) // in article.js
+ * models.user.hasMany(models.article) // in user.js
+ * 
+ * build route functionality -- search form on GET /
+ * 
+ * GET / -- show a form search the API
+ * GET /results -- show api search results to user
+ * 
+ * USERS CONTROLLER:
+ * GET /users/signup -- show a form that lets a user sign up and POST to /users
+ * POST /users -- create a new user in the database and redirect to /users/:id
+ * GET /users/:id -- show a user thier profile and thier saved articles
+ * GET /users/login -- show a form that lets a user login and POST to /users/login
+ * POST /users/login -- log a user in and redirect to GET /users/:id
+ * 
+ * ARTICLES CONTROLLER:
+ * GET /articles/:id -- display an article to the user
+ * POST /articles -- add an article to the database for a user and redirect /users/:id or /articles/:id
+ */
