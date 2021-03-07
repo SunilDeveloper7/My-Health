@@ -9,6 +9,7 @@ const cryptoJS = require('crypto-js')
 const db = require('./models')
 
 
+
 const app = express()
 const rowdyResults = rowdy.begin(app)
 const PORT = process.env.PORT || 3000

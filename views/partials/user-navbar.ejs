@@ -1,0 +1,6 @@
+<% if (user) { %>
+    <nav id="user-nav">
+        <a href="/users/profile">My Account</a>
+        <a href="/users/<%= user.id %>/articles">Saved Items</a>
+        </nav>
+    <% } %>

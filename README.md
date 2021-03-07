@@ -13,7 +13,7 @@ User are required to sign up and fill necessary information about yourself to ge
 Here is the brief discription and features of how this app works.
 <li>You can excess thousand of topic and sub-topic related to your health queries.
 <li>You/User can make a profile and save your queries and information for your future references.
-<li>You/user can share the information to other 
+<li>user can create password and login with there user email and password
 <li>You can create your health profile b entering your full information
 <li>With your given information app can recommend you vaious health information as well as display you your nearest healthcare facilities.
 

@@ -3,6 +3,8 @@ const { default: axios } = require('axios')
 const db = require('../models')
 const bcrypt = require('bcrypt')
 const AES = require('crypto-js/aes')
+// const jwt = require('jsonwebtoken');
+
 
 router.get('/', async (req, res) => {
     if(!res.locals.user) {
@@ -56,6 +58,12 @@ router.get('/new', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('users/login')
 })
+
+
+
+
+
+
 // Show users profile page
 router.get('/main', (req, res) => {
     res.render('users/main')
@@ -64,6 +72,7 @@ router.get('/main', (req, res) => {
 // Show new user creation page
 router.get('/new', (req, res) => {
     res.render('users/new')
+    res.redirect('users/login')
 })
 
 router.get('/logout', (req, res) => {
@@ -77,12 +86,16 @@ router.post('/login', async (req, res) => {
         const user = await db.user.findOne({
             where: { email: req.body.email }
         })
-
+        console.log(req.body.email)
+        console.log(user.password)
+        //directly to else block may be we don't have users. async issue?? :(
         if(user && bcrypt.compareSync(req.body.password, user.password)) {
+            console.log('loged in good')
             const encryptedId = AES.encrypt(user.id.toString(), process.env.COOKIE_SECRET).toString()
             res.cookie('userId', encryptedId)
-            res.redirect('/')
+            res.redirect('/main')
         } else {
+            console.log('something went wrong')
             res.render("users/login", { errors: "Invalid email/password" })
         }
 
@@ -91,13 +104,6 @@ router.post('/login', async (req, res) => {
         res.render('users/login', { errors: "Invalid email/password" })
     }
 })
-
-
-
-
-
-
-
 
 
 router.get('/:id', async (req, res) => {
