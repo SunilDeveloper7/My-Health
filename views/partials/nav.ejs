@@ -1,1 +1,17 @@
-<nav>
+
+    <nav>
+        <div>
+            <a href="/">Homepage</a>
+        </div>
+        <div class="logo"> <img src='./p2.jpg'/> </div>
+        <div>
+            <% if(user) { %>
+                <a href="/users/logout">Log Out</a>   
+                <a href="/users/profile">My Account</a>
+                <a href="/users/<%= user.id %>/articles">Saved Items</a>
+            <% } else { %>
+                <a href="/users/login">Log In</a>
+                <a href="/users/new">Sign up</a>
+            <% } %>
+        </div>
+    </nav>

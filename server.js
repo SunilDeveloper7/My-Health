@@ -67,13 +67,6 @@ app.get('/', async (req,res) => {
     }
 })
 
-
-
-
-
-
-
-
 app.listen(PORT, () => {
     rowdyResults.print()
 })
